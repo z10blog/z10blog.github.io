@@ -5,16 +5,19 @@
   
   <title>Python 数据类型和变量 | FengYing的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="编程就是为了处理各种数据，当然每种编程语言中都有多种类型的数据。每种编程语言都自带的内置数据类型都无法满足我们的需要，但是每种编程语言都提供了让我们创建自己的数据类型的机制。刚学首先要掌握的就是最基本的数据类型，慢慢的接触更多的和自己创建新的数据类型。">
+  <meta name="description" content="编程就是为了处理各种数据，当然每种编程语言中都有多种类型的数据。每种编程语言都自带的内置数据类型都无法满足我们的需要，但是每种编程语言都提供了让我们创建自己的数据类型的机制。刚学首先要掌握的就是最基本的数据类型，慢慢的接触更多的和自己创建新的数据类型。
+type() 认识type() 是一个获取对象类型的函数，当我们查看某个对象的类型时可以使用。如想获取 a 的类型我们可以这样使用：type(a)">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Python 数据类型和变量">
 <meta property="og:url" content="https://z10blog.github.io/2017/03/15/Python-数据类型和变量/index.html">
 <meta property="og:site_name" content="FengYing的博客">
-<meta property="og:description" content="编程就是为了处理各种数据，当然每种编程语言中都有多种类型的数据。每种编程语言都自带的内置数据类型都无法满足我们的需要，但是每种编程语言都提供了让我们创建自己的数据类型的机制。刚学首先要掌握的就是最基本的数据类型，慢慢的接触更多的和自己创建新的数据类型。">
-<meta property="og:updated_time" content="2017-03-15T13:39:50.034Z">
+<meta property="og:description" content="编程就是为了处理各种数据，当然每种编程语言中都有多种类型的数据。每种编程语言都自带的内置数据类型都无法满足我们的需要，但是每种编程语言都提供了让我们创建自己的数据类型的机制。刚学首先要掌握的就是最基本的数据类型，慢慢的接触更多的和自己创建新的数据类型。
+type() 认识type() 是一个获取对象类型的函数，当我们查看某个对象的类型时可以使用。如想获取 a 的类型我们可以这样使用：type(a)">
+<meta property="og:updated_time" content="2017-03-15T15:45:12.877Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python 数据类型和变量">
-<meta name="twitter:description" content="编程就是为了处理各种数据，当然每种编程语言中都有多种类型的数据。每种编程语言都自带的内置数据类型都无法满足我们的需要，但是每种编程语言都提供了让我们创建自己的数据类型的机制。刚学首先要掌握的就是最基本的数据类型，慢慢的接触更多的和自己创建新的数据类型。">
+<meta name="twitter:description" content="编程就是为了处理各种数据，当然每种编程语言中都有多种类型的数据。每种编程语言都自带的内置数据类型都无法满足我们的需要，但是每种编程语言都提供了让我们创建自己的数据类型的机制。刚学首先要掌握的就是最基本的数据类型，慢慢的接触更多的和自己创建新的数据类型。
+type() 认识type() 是一个获取对象类型的函数，当我们查看某个对象的类型时可以使用。如想获取 a 的类型我们可以这样使用：type(a)">
   
     <link rel="alternate" href="/atom.xml" title="FengYing的博客" type="application/atom+xml">
   
@@ -90,11 +93,36 @@
     <div class="article-entry" itemprop="articleBody">
       
         <p>编程就是为了处理各种数据，当然每种编程语言中都有多种类型的数据。每种编程语言都自带的内置数据类型都无法满足我们的需要，但是每种编程语言都提供了让我们创建自己的数据类型的机制。刚学首先要掌握的就是最基本的数据类型，慢慢的接触更多的和自己创建新的数据类型。</p>
+<h3 id="type-认识"><a href="#type-认识" class="headerlink" title="type() 认识"></a>type() 认识</h3><p>type() 是一个获取对象类型的函数，当我们查看某个对象的类型时可以使用。<br>如想获取 a 的类型我们可以这样使用：<br>type(a)</p>
+<p>如果a 是一个整数则返回 <class 'int'=""><br>如果a 是一个浮点数则返回 <class 'float'=""><br>如果a 是一个字符串则返回 <class 'str'=""><br>如果a 是一个函数则返回 <class 'function'=""><br>如果a 是一个元组则返回 <class 'tuple'=""><br>如果a 是一个字典则返回 <class 'dict'=""><br>如果a 是一个模块则返回 <class 'module'=""><br>… 等等</class></class></class></class></class></class></class></p>
+<h3 id="整数的表示方法"><a href="#整数的表示方法" class="headerlink" title="整数的表示方法"></a>整数的表示方法</h3><p>首先我们可以按进制区分：</p>
+<pre><code>1. 10进制
+2. 2进制
+3. 16进制 （0x8af34f 以0x开头)
+4. 8进制
+</code></pre><h3 id="浮点数"><a href="#浮点数" class="headerlink" title="浮点数"></a>浮点数</h3><p>浮点数就是通常说的带小数点的数字。<br>如：23.2，0.12，12e3,12e-4<br>12e3 = 1200.0<br>12e-4 = 0.0012<br>带e的表示方法是科学记数法</p>
+<h3 id="字符串"><a href="#字符串" class="headerlink" title="字符串"></a>字符串</h3><p>Python 中的字符串可以用’’、””、’’’ ‘’’、””” “””四种表示方法，最后两种效果相同。<br>当我们要在字符串中使用引号时需要进行转义，如下：<br>‘I\’m \”OK\”!’</p>
+<p>\’ \” 代表转义成’和”<br>还有\n 代表换行</p>
+<h4 id="‘’’-‘’’-三个引号的字符串"><a href="#‘’’-‘’’-三个引号的字符串" class="headerlink" title="‘’’ ‘’’ 三个引号的字符串"></a>‘’’ ‘’’ 三个引号的字符串</h4><p>‘’’hello world<br>I’m “OK”<br>end<br>‘’’</p>
+<p>将会打印出引号里边的格式，3个引号内部的所有内容将会原封不动的输出。<br>在字符串前加上r 代表不进行转义，如遇到\n将不会换行，而是最为字符串输出。</p>
+<h3 id="布尔值"><a href="#布尔值" class="headerlink" title="布尔值"></a>布尔值</h3><p>布尔值只有True(真)和False(假),在Python中我们可以直接使用True 和 False代表真和假。要注意大小写。</p>
+<p>布尔值可以使用 and,or,not进行运算：<br>and 是与的关系只有参与运算的所有布尔值都为真时结果才为真。<br>or 只要参与运算的所有布尔值中有一个为真则结果就为真。<br>not 取反</p>
+<h3 id="空值-None"><a href="#空值-None" class="headerlink" title="空值 None"></a>空值 None</h3><p>空值是Python里一个特殊的值，用None表示。None不代表任何数据，就是空。</p>
+<h3 id="变量"><a href="#变量" class="headerlink" title="变量"></a>变量</h3><p>变量很好理解，就是可以变化的量，与之对应的是常量，常量是不能改变的量。</p>
+<p>a = ‘hello’<br>b = a<br>a = ‘world’</p>
+<p>1.Python首先在内存中创建了一个字符串’hello’,然后在内存中创建了一个名为a的变量，并且指向字符串’hello’。<br>2.Python在内存中创建变量b，并且把b也指向’hello’<br>3.Python在内存中创建字符串’world’,并且把a 指向它。<br>这时b = ‘hello’, a = ‘world’</p>
+<h3 id="除法"><a href="#除法" class="headerlink" title="除法"></a>除法</h3><p>Python有几种除法：</p>
+<ol>
+<li>10/3 精确除法</li>
+<li>10 // 3 整除只保留结果的整数部分</li>
+<li>10%3 求余 只保留余数</li>
+</ol>
+<p>END！</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://z10blog.github.io/2017/03/15/Python-数据类型和变量/" data-id="cj0b2h1dm0001wovgptlpvz8o" class="article-share-link">Share</a>
+      <a data-url="https://z10blog.github.io/2017/03/15/Python-数据类型和变量/" data-id="cj0b51m240003t4vg30bee10b" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据类型/">数据类型</a></li></ul>
