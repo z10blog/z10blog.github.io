@@ -3,27 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>认识C enum 枚举 | FengYing的博客</title>
+  <title>Python 语法之缩进和注释 | FengYing的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="枚举类型 enum 是用来定义一组整型常量的模板。枚举量默认从零开始，我们也可以改变枚举两从指定的地方开始。
-定义枚举enum Day {Mon,Tues,Wed,Thurs,Fri,Sat,Sun}
-这样我们就定义了一个枚举类型 Day; 定义之后我们就可以使用 Day 来定义枚举对象了，如下：
-enum Day a;a = Tues;    // a 这时等于1">
+  <meta name="description" content="Python 不像C/C++那样用 { } 区分程序块，Python 用4个空格和”:” 号来区分。123456789# 定义一个函数 abs 打印出绝对值， 定义函数用 def functionName():n = int(input(&apos;请输入一个数字:&apos;))def abs(n):	if n &amp;gt;= 0:		print(n)	else:		print(-n)、		abs(n)
+打印结果：请输">
 <meta property="og:type" content="article">
-<meta property="og:title" content="认识C enum 枚举">
-<meta property="og:url" content="https://z10blog.github.io/2017/03/13/认识C-enum-枚举/index.html">
+<meta property="og:title" content="Python 语法之缩进和注释">
+<meta property="og:url" content="https://z10blog.github.io/2017/03/15/Python-语法之缩进和注释/index.html">
 <meta property="og:site_name" content="FengYing的博客">
-<meta property="og:description" content="枚举类型 enum 是用来定义一组整型常量的模板。枚举量默认从零开始，我们也可以改变枚举两从指定的地方开始。
-定义枚举enum Day {Mon,Tues,Wed,Thurs,Fri,Sat,Sun}
-这样我们就定义了一个枚举类型 Day; 定义之后我们就可以使用 Day 来定义枚举对象了，如下：
-enum Day a;a = Tues;    // a 这时等于1">
-<meta property="og:updated_time" content="2017-03-13T15:16:11.755Z">
+<meta property="og:description" content="Python 不像C/C++那样用 { } 区分程序块，Python 用4个空格和”:” 号来区分。123456789# 定义一个函数 abs 打印出绝对值， 定义函数用 def functionName():n = int(input(&apos;请输入一个数字:&apos;))def abs(n):	if n &amp;gt;= 0:		print(n)	else:		print(-n)、		abs(n)
+打印结果：请输">
+<meta property="og:updated_time" content="2017-03-15T12:53:49.134Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="认识C enum 枚举">
-<meta name="twitter:description" content="枚举类型 enum 是用来定义一组整型常量的模板。枚举量默认从零开始，我们也可以改变枚举两从指定的地方开始。
-定义枚举enum Day {Mon,Tues,Wed,Thurs,Fri,Sat,Sun}
-这样我们就定义了一个枚举类型 Day; 定义之后我们就可以使用 Day 来定义枚举对象了，如下：
-enum Day a;a = Tues;    // a 这时等于1">
+<meta name="twitter:title" content="Python 语法之缩进和注释">
+<meta name="twitter:description" content="Python 不像C/C++那样用 { } 区分程序块，Python 用4个空格和”:” 号来区分。123456789# 定义一个函数 abs 打印出绝对值， 定义函数用 def functionName():n = int(input(&apos;请输入一个数字:&apos;))def abs(n):	if n &amp;gt;= 0:		print(n)	else:		print(-n)、		abs(n)
+打印结果：请输">
   
     <link rel="alternate" href="/atom.xml" title="FengYing的博客" type="application/atom+xml">
   
@@ -76,10 +70,10 @@ enum Day a;a = Tues;    // a 这时等于1">
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-认识C-enum-枚举" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Python-语法之缩进和注释" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/03/13/认识C-enum-枚举/" class="article-date">
-  <time datetime="2017-03-13T14:57:03.000Z" itemprop="datePublished">2017-03-13</time>
+    <a href="/2017/03/15/Python-语法之缩进和注释/" class="article-date">
+  <time datetime="2017-03-15T09:40:55.000Z" itemprop="datePublished">2017-03-15</time>
 </a>
     
   </div>
@@ -90,7 +84,7 @@ enum Day a;a = Tues;    // a 这时等于1">
         
   
     <h1 class="article-title" itemprop="name">
-      认识C enum 枚举
+      Python 语法之缩进和注释
     </h1>
   
 
@@ -98,36 +92,34 @@ enum Day a;a = Tues;    // a 这时等于1">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>枚举类型 enum 是用来定义一组整型常量的模板。枚举量默认从零开始，我们也可以改变枚举两从指定的地方开始。</p>
-<h2 id="定义枚举"><a href="#定义枚举" class="headerlink" title="定义枚举"></a>定义枚举</h2><p>enum Day {Mon,Tues,Wed,Thurs,Fri,Sat,Sun}</p>
-<p>这样我们就定义了一个枚举类型 Day; 定义之后我们就可以使用 Day 来定义枚举对象了，如下：</p>
-<p>enum Day a;<br>a = Tues;    // a 这时等于1</p>
+        <p>Python 不像C/C++那样用 { } 区分程序块，Python 用4个空格和”:” 号来区分。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 定义一个函数 abs 打印出绝对值， 定义函数用 def functionName():</span></div><div class="line">n = int(input(<span class="string">'请输入一个数字:'</span>))</div><div class="line"><span class="function"><span class="keyword">def</span> <span class="title">abs</span><span class="params">(n)</span>:</span></div><div class="line">	<span class="keyword">if</span> n &gt;= <span class="number">0</span>:</div><div class="line">		print(n)</div><div class="line">	<span class="keyword">else</span>:</div><div class="line">		print(-n)、</div><div class="line">		</div><div class="line">abs(n)</div></pre></td></tr></table></figure></p>
+<h3 id="打印结果："><a href="#打印结果：" class="headerlink" title="打印结果："></a>打印结果：</h3><p>请输入一个数字:-22<br>22</p>
+<p>以 # 开始的是单行注释，多行注释有两种：</p>
+<ol>
+<li>以’’’ 注释内容 ‘’’</li>
+<li>以””” 注释内容 “””</li>
+</ol>
+<p>两种都可以使用。</p>
+<h3 id="特别注意："><a href="#特别注意：" class="headerlink" title="特别注意："></a>特别注意：</h3><p>在 Python 编程中特别要注意代码的缩进，缩进错误代码是无法运行的。有了强制缩进我们写出的代码风格就更加统一漂亮了。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://z10blog.github.io/2017/03/13/认识C-enum-枚举/" data-id="cj0ayx9r20002p0vgdyu9fig7" class="article-share-link">Share</a>
+      <a data-url="https://z10blog.github.io/2017/03/15/Python-语法之缩进和注释/" data-id="cj0ayx9r00001p0vgea8qktk5" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/语法/">语法</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2017/03/15/Python-Hello-World/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          Python Hello World
-        
-      </div>
-    </a>
   
-  
-    <a href="/2017/03/11/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/03/15/Python-Hello-World/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">Python Hello World</div>
     </a>
   
 </nav>
