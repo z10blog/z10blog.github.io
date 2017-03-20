@@ -3,27 +3,27 @@
 <head>
   <meta charset="utf-8">
   
-  <title>认识C enum 枚举 | FengYing的博客</title>
+  <title>Python 获取对象的信息 | FengYing的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="枚举类型 enum 是用来定义一组整型常量的模板。枚举量默认从零开始，我们也可以改变枚举两从指定的地方开始。
-定义枚举enum Day {Mon,Tues,Wed,Thurs,Fri,Sat,Sun}
-这样我们就定义了一个枚举类型 Day; 定义之后我们就可以使用 Day 来定义枚举对象了，如下：
-enum Day a;a = Tues;    // a 这时等于1">
+  <meta name="description" content="在编程中我们经常会要判断一个对象的类型等信息，包括对象的类型，类型有哪些方法和属性等。
+在Python中使用type() 判断type() 函数返回的是对象的类型，比如一个对象是int还是float。
+1234&amp;gt;&amp;gt;&amp;gt; type(1) == type(343)True&amp;gt;&amp;gt;&amp;gt; type(&apos;str&apos;) == type(22)False
+types模块如果我们要判断一个">
 <meta property="og:type" content="article">
-<meta property="og:title" content="认识C enum 枚举">
-<meta property="og:url" content="https://z10blog.github.io/2017/03/13/认识C-enum-枚举/index.html">
+<meta property="og:title" content="Python 获取对象的信息">
+<meta property="og:url" content="https://z10blog.github.io/2017/03/19/Python-获取对象的信息/index.html">
 <meta property="og:site_name" content="FengYing的博客">
-<meta property="og:description" content="枚举类型 enum 是用来定义一组整型常量的模板。枚举量默认从零开始，我们也可以改变枚举两从指定的地方开始。
-定义枚举enum Day {Mon,Tues,Wed,Thurs,Fri,Sat,Sun}
-这样我们就定义了一个枚举类型 Day; 定义之后我们就可以使用 Day 来定义枚举对象了，如下：
-enum Day a;a = Tues;    // a 这时等于1">
-<meta property="og:updated_time" content="2017-03-13T15:16:11.755Z">
+<meta property="og:description" content="在编程中我们经常会要判断一个对象的类型等信息，包括对象的类型，类型有哪些方法和属性等。
+在Python中使用type() 判断type() 函数返回的是对象的类型，比如一个对象是int还是float。
+1234&amp;gt;&amp;gt;&amp;gt; type(1) == type(343)True&amp;gt;&amp;gt;&amp;gt; type(&apos;str&apos;) == type(22)False
+types模块如果我们要判断一个">
+<meta property="og:updated_time" content="2017-03-20T04:39:35.457Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="认识C enum 枚举">
-<meta name="twitter:description" content="枚举类型 enum 是用来定义一组整型常量的模板。枚举量默认从零开始，我们也可以改变枚举两从指定的地方开始。
-定义枚举enum Day {Mon,Tues,Wed,Thurs,Fri,Sat,Sun}
-这样我们就定义了一个枚举类型 Day; 定义之后我们就可以使用 Day 来定义枚举对象了，如下：
-enum Day a;a = Tues;    // a 这时等于1">
+<meta name="twitter:title" content="Python 获取对象的信息">
+<meta name="twitter:description" content="在编程中我们经常会要判断一个对象的类型等信息，包括对象的类型，类型有哪些方法和属性等。
+在Python中使用type() 判断type() 函数返回的是对象的类型，比如一个对象是int还是float。
+1234&amp;gt;&amp;gt;&amp;gt; type(1) == type(343)True&amp;gt;&amp;gt;&amp;gt; type(&apos;str&apos;) == type(22)False
+types模块如果我们要判断一个">
   
     <link rel="alternate" href="/atom.xml" title="FengYing的博客" type="application/atom+xml">
   
@@ -76,10 +76,10 @@ enum Day a;a = Tues;    // a 这时等于1">
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-认识C-enum-枚举" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="post-Python-获取对象的信息" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2017/03/13/认识C-enum-枚举/" class="article-date">
-  <time datetime="2017-03-13T14:57:03.000Z" itemprop="datePublished">2017-03-13</time>
+    <a href="/2017/03/19/Python-获取对象的信息/" class="article-date">
+  <time datetime="2017-03-19T09:05:46.000Z" itemprop="datePublished">2017-03-19</time>
 </a>
     
   </div>
@@ -90,7 +90,7 @@ enum Day a;a = Tues;    // a 这时等于1">
         
   
     <h1 class="article-title" itemprop="name">
-      认识C enum 枚举
+      Python 获取对象的信息
     </h1>
   
 
@@ -98,36 +98,39 @@ enum Day a;a = Tues;    // a 这时等于1">
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>枚举类型 enum 是用来定义一组整型常量的模板。枚举量默认从零开始，我们也可以改变枚举两从指定的地方开始。</p>
-<h2 id="定义枚举"><a href="#定义枚举" class="headerlink" title="定义枚举"></a>定义枚举</h2><p>enum Day {Mon,Tues,Wed,Thurs,Fri,Sat,Sun}</p>
-<p>这样我们就定义了一个枚举类型 Day; 定义之后我们就可以使用 Day 来定义枚举对象了，如下：</p>
-<p>enum Day a;<br>a = Tues;    // a 这时等于1</p>
+        <p>在编程中我们经常会要判断一个对象的类型等信息，包括对象的类型，类型有哪些方法和属性等。</p>
+<h3 id="在Python中使用type-判断"><a href="#在Python中使用type-判断" class="headerlink" title="在Python中使用type() 判断"></a>在Python中使用type() 判断</h3><p>type() 函数返回的是对象的类型，比如一个对象是int还是float。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>type(<span class="number">1</span>) == type(<span class="number">343</span>)</div><div class="line"><span class="keyword">True</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>type(<span class="string">'str'</span>) == type(<span class="number">22</span>)</div><div class="line"><span class="keyword">False</span></div></pre></td></tr></table></figure>
+<h3 id="types模块"><a href="#types模块" class="headerlink" title="types模块"></a>types模块</h3><p>如果我们要判断一个对象是否是函数我们可以使用types模块中定义的常量<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> types</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">fn</span><span class="params">()</span>:</span></div><div class="line">		<span class="keyword">pass</span></div><div class="line">		</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>type(fn)==types.FunctionType</div><div class="line"><span class="keyword">True</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>type(abs)==types.BuiltinFunctionType</div><div class="line"><span class="keyword">True</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>type(<span class="keyword">lambda</span> x: x)==types.LambdaType</div><div class="line"><span class="keyword">True</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>type((x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>))==types.GeneratoryType</div><div class="line"><span class="keyword">True</span></div></pre></td></tr></table></figure></p>
+<p>types.FunctionType #函数<br>types.BuiltinFunctionType #内置函数<br>types.LambdaType #Lambda<br>types.GeneratoryType #生成器</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://z10blog.github.io/2017/03/13/认识C-enum-枚举/" data-id="cj0i50alx0005qwvgsfkmiei2" class="article-share-link">Share</a>
+      <a data-url="https://z10blog.github.io/2017/03/19/Python-获取对象的信息/" data-id="cj0i50ake0001qwvg1altycua" class="article-share-link">Share</a>
       
       
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/对象/">对象</a></li></ul>
+
     </footer>
   </div>
   
     
 <nav id="article-nav">
   
-    <a href="/2017/03/15/Python-Hello-World/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2017/03/20/Ubuntu-kivy安装/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Newer</strong>
       <div class="article-nav-title">
         
-          Python Hello World
+          Ubuntu kivy安装
         
       </div>
     </a>
   
   
-    <a href="/2017/03/11/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2017/03/16/Python-函数认识/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Hello World</div>
+      <div class="article-nav-title">Python 函数认识</div>
     </a>
   
 </nav>

@@ -52,9 +52,9 @@
       </nav>
       <nav id="sub-nav">
         
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
         
-        <a id="nav-search-btn" class="nav-icon" title="Rechercher"></a>
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
       </nav>
       <div id="search-form-wrap">
         <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://z10blog.github.io"></form>
@@ -64,6 +64,95 @@
 </header>
       <div class="outer">
         <section id="main">
+  
+    <article id="post-Ubuntu-kivy安装" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/20/Ubuntu-kivy安装/" class="article-date">
+  <time datetime="2017-03-20T04:40:00.000Z" itemprop="datePublished">2017-03-20</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/20/Ubuntu-kivy安装/">Ubuntu kivy安装</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>这里我们参考的是Kivy官网的安装方法，网址：<a href="https://kivy.org/#download" target="_blank" rel="external">https://kivy.org/#download</a></p>
+<h3 id="安装稳定版本的Kivy"><a href="#安装稳定版本的Kivy" class="headerlink" title="安装稳定版本的Kivy"></a>安装稳定版本的Kivy</h3><ol>
+<li>$ sudo add-apt-repository ppa:kivy-team/kivy</li>
+<li>$ sudo apt-get update</li>
+<li>$ sudo apt-get install python3-kivy</li>
+</ol>
+<p>第三步我们安装的是python3的 kivy<br>如果是python2的那么要换成<br>$ sudo apt-get install python-kivy</p>
+<h3 id="安装Kivy的examples（例子）"><a href="#安装Kivy的examples（例子）" class="headerlink" title="安装Kivy的examples（例子）"></a>安装Kivy的examples（例子）</h3><p>$ sudo apt-get install python-kivy-examples</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://z10blog.github.io/2017/03/20/Ubuntu-kivy安装/" data-id="cj0i50akn0003qwvgstb9v2r3" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Kivy/">Kivy</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
+    <article id="post-Python-获取对象的信息" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/03/19/Python-获取对象的信息/" class="article-date">
+  <time datetime="2017-03-19T09:05:46.000Z" itemprop="datePublished">2017-03-19</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2017/03/19/Python-获取对象的信息/">Python 获取对象的信息</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>在编程中我们经常会要判断一个对象的类型等信息，包括对象的类型，类型有哪些方法和属性等。</p>
+<h3 id="在Python中使用type-判断"><a href="#在Python中使用type-判断" class="headerlink" title="在Python中使用type() 判断"></a>在Python中使用type() 判断</h3><p>type() 函数返回的是对象的类型，比如一个对象是int还是float。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span>type(<span class="number">1</span>) == type(<span class="number">343</span>)</div><div class="line"><span class="keyword">True</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>type(<span class="string">'str'</span>) == type(<span class="number">22</span>)</div><div class="line"><span class="keyword">False</span></div></pre></td></tr></table></figure>
+<h3 id="types模块"><a href="#types模块" class="headerlink" title="types模块"></a>types模块</h3><p>如果我们要判断一个对象是否是函数我们可以使用types模块中定义的常量<br><figure class="highlight python"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="keyword">import</span> types</div><div class="line"><span class="meta">&gt;&gt;&gt; </span><span class="function"><span class="keyword">def</span> <span class="title">fn</span><span class="params">()</span>:</span></div><div class="line">		<span class="keyword">pass</span></div><div class="line">		</div><div class="line"><span class="meta">&gt;&gt;&gt; </span>type(fn)==types.FunctionType</div><div class="line"><span class="keyword">True</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>type(abs)==types.BuiltinFunctionType</div><div class="line"><span class="keyword">True</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>type(<span class="keyword">lambda</span> x: x)==types.LambdaType</div><div class="line"><span class="keyword">True</span></div><div class="line"><span class="meta">&gt;&gt;&gt; </span>type((x <span class="keyword">for</span> x <span class="keyword">in</span> range(<span class="number">10</span>))==types.GeneratoryType</div><div class="line"><span class="keyword">True</span></div></pre></td></tr></table></figure></p>
+<p>types.FunctionType #函数<br>types.BuiltinFunctionType #内置函数<br>types.LambdaType #Lambda<br>types.GeneratoryType #生成器</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://z10blog.github.io/2017/03/19/Python-获取对象的信息/" data-id="cj0i50ake0001qwvg1altycua" class="article-share-link">Share</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/对象/">对象</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
   
     <article id="post-Python-函数认识" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
@@ -114,7 +203,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://z10blog.github.io/2017/03/16/Python-函数认识/" data-id="cj0cgwxtb0000xovg9ea1ubfp" class="article-share-link">Partager</a>
+      <a data-url="https://z10blog.github.io/2017/03/16/Python-函数认识/" data-id="cj0i50am4000aqwvghp4hixgs" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/函数/">函数</a></li></ul>
@@ -190,7 +279,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://z10blog.github.io/2017/03/15/Python-数据类型和变量/" data-id="cj0cgwxti0003xovg5mh7vi0x" class="article-share-link">Partager</a>
+      <a data-url="https://z10blog.github.io/2017/03/15/Python-数据类型和变量/" data-id="cj0i50aly0007qwvgblje2r98" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据类型/">数据类型</a></li></ul>
@@ -237,7 +326,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://z10blog.github.io/2017/03/15/Python-语法之缩进和注释/" data-id="cj0cgwxtj0004xovgzyt0bgh0" class="article-share-link">Partager</a>
+      <a data-url="https://z10blog.github.io/2017/03/15/Python-语法之缩进和注释/" data-id="cj0i50alz0008qwvguefq2fw4" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/语法/">语法</a></li></ul>
@@ -281,7 +370,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://z10blog.github.io/2017/03/15/Python-Hello-World/" data-id="cj0cgwxte0001xovgln11ty6y" class="article-share-link">Partager</a>
+      <a data-url="https://z10blog.github.io/2017/03/15/Python-Hello-World/" data-id="cj0i50ajz0000qwvguypk7d9y" class="article-share-link">Share</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hello-World/">Hello World</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
@@ -323,7 +412,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://z10blog.github.io/2017/03/13/认识C-enum-枚举/" data-id="cj0cgwxtm0005xovgmbzctofm" class="article-share-link">Partager</a>
+      <a data-url="https://z10blog.github.io/2017/03/13/认识C-enum-枚举/" data-id="cj0i50alx0005qwvgsfkmiei2" class="article-share-link">Share</a>
       
       
     </footer>
@@ -368,7 +457,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="https://z10blog.github.io/2017/03/11/hello-world/" data-id="cj0cgwxto0007xovgvghlrg2h" class="article-share-link">Partager</a>
+      <a data-url="https://z10blog.github.io/2017/03/11/hello-world/" data-id="cj0i50akq0004qwvgnv4b2to5" class="article-share-link">Share</a>
       
       
     </footer>
@@ -388,9 +477,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Mot-clés</h3>
+    <h3 class="widget-title">Tags</h3>
     <div class="widget">
-      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hello-World/">Hello World</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/函数/">函数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据类型/">数据类型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/语法/">语法</a></li></ul>
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hello-World/">Hello World</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kivy/">Kivy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/函数/">函数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/对象/">对象</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据类型/">数据类型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/语法/">语法</a></li></ul>
     </div>
   </div>
 
@@ -398,9 +487,9 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Nuage de mot-clés</h3>
+    <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Hello-World/" style="font-size: 10px;">Hello World</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/函数/" style="font-size: 10px;">函数</a> <a href="/tags/数据类型/" style="font-size: 10px;">数据类型</a> <a href="/tags/语法/" style="font-size: 10px;">语法</a>
+      <a href="/tags/Hello-World/" style="font-size: 10px;">Hello World</a> <a href="/tags/Kivy/" style="font-size: 10px;">Kivy</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/函数/" style="font-size: 10px;">函数</a> <a href="/tags/对象/" style="font-size: 10px;">对象</a> <a href="/tags/数据类型/" style="font-size: 10px;">数据类型</a> <a href="/tags/语法/" style="font-size: 10px;">语法</a>
     </div>
   </div>
 
@@ -417,9 +506,17 @@
   
     
   <div class="widget-wrap">
-    <h3 class="widget-title">Articles récents</h3>
+    <h3 class="widget-title">Recent Posts</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2017/03/20/Ubuntu-kivy安装/">Ubuntu kivy安装</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/19/Python-获取对象的信息/">Python 获取对象的信息</a>
+          </li>
         
           <li>
             <a href="/2017/03/16/Python-函数认识/">Python 函数认识</a>
@@ -431,14 +528,6 @@
         
           <li>
             <a href="/2017/03/15/Python-语法之缩进和注释/">Python 语法之缩进和注释</a>
-          </li>
-        
-          <li>
-            <a href="/2017/03/15/Python-Hello-World/">Python Hello World</a>
-          </li>
-        
-          <li>
-            <a href="/2017/03/13/认识C-enum-枚举/">认识C enum 枚举</a>
           </li>
         
       </ul>
@@ -454,7 +543,7 @@
   <div class="outer">
     <div id="footer-info" class="inner">
       &copy; 2017 Feng Ying<br>
-      Propulsé by <a href="http://hexo.io/" target="_blank">Hexo</a>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
     </div>
   </div>
 </footer>
