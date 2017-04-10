@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>git 基本操作 | FengYing的博客</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="git 是一个开源的版本控制系统master 主分支git reset HEAD file命令既可以回退版本，也可以把暂存区的修改回退到工作区。当我们用HEAD时，表示最新的版本。rm test.txt 命令只是从工作区删除了文件，仓库中仍然存在这个文件，如果要从仓库中删除这个文件可以使用git rm test.txt 命令，另外如果是误删了，我们可以使用git checkout – test.t">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git 基本操作">
+<meta property="og:url" content="https://z10blog.github.io/2017/04/10/git-基本操作/index.html">
+<meta property="og:site_name" content="FengYing的博客">
+<meta property="og:description" content="git 是一个开源的版本控制系统master 主分支git reset HEAD file命令既可以回退版本，也可以把暂存区的修改回退到工作区。当我们用HEAD时，表示最新的版本。rm test.txt 命令只是从工作区删除了文件，仓库中仍然存在这个文件，如果要从仓库中删除这个文件可以使用git rm test.txt 命令，另外如果是误删了，我们可以使用git checkout – test.t">
+<meta property="og:updated_time" content="2017-04-10T15:27:11.921Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="git 基本操作">
+<meta name="twitter:description" content="git 是一个开源的版本控制系统master 主分支git reset HEAD file命令既可以回退版本，也可以把暂存区的修改回退到工作区。当我们用HEAD时，表示最新的版本。rm test.txt 命令只是从工作区删除了文件，仓库中仍然存在这个文件，如果要从仓库中删除这个文件可以使用git rm test.txt 命令，另外如果是误删了，我们可以使用git checkout – test.t">
+  
+    <link rel="alternate" href="/atom.xml" title="FengYing的博客" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+    <link href="//fonts.googleapis.com/css?family=Source+Code+Pro" rel="stylesheet" type="text/css">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">FengYing的博客</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">学习编程、学习设计</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="https://z10blog.github.io"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-git-基本操作" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2017/04/10/git-基本操作/" class="article-date">
+  <time datetime="2017-04-10T12:38:10.000Z" itemprop="datePublished">2017-04-10</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      git 基本操作
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>git 是一个开源的版本控制系统<br>master 主分支<br>git reset HEAD file命令既可以回退版本，也可以把暂存区的修改回退到工作区。当我们用HEAD时，表示最新的版本。<br>rm test.txt 命令只是从工作区删除了文件，仓库中仍然存在这个文件，如果要从仓库中删除这个文件可以使用git rm test.txt 命令，另外如果是误删了，我们可以使用git checkout – test.txt 命令把文件从仓库中恢复到工作区。<br>HEAD 表示当前版本，HEAD^表示上一个版本，HEAD^^…，也可以写成HEAD~100<br>常用命令：</p>
+<pre><code>1. git init 初始化一个git 仓库
+2. git add readme.txt 往仓库暂存区里添加文件
+3. git commit -m &quot;add commit des&quot; 把所有暂存区内容提交到当前分支
+4. git status 查看仓库状态
+5. git diff readme.txt 查看文件文件修改了那些内容
+6. git log 查看提交历史 --pretty=oneline 之显示commit id 和 提交说明
+7. git reset --hard HEAD^ | git reset --hard 323423 指定comit id
+7. git reflog 用来打印出历史命令记录
+http://www.liaoxuefeng.com/files/attachments/001384907702917346729e9afbf4127b6dfbae9207af016000/0
+8. git diff HEAD -- readme.txt 查看工作区和版本库里面最新版本的区别
+9. git checkout -- readme.txt 丢弃工作区中的修改
+</code></pre><p>** 远程仓库 remote 远程<br>$git remote add origin git@github.com:xxxxxx/xxxxx.git<br>origin 是仓库的名称<br>$ git push -u origin master<br>把本地库的内容推送到远程，用git push命令，实际上是把当前分支master推送到远程。</p>
+<p>由于远程库是空的，我们第一次推送master分支时，加上了-u参数，Git不但会把本地的master分支内容推送的远程新的master分支，还会把本地的master分支和远程的master分支关联起来，在以后的推送或者拉取时就可以简化命令。如下：<br>$ git push origin master</p>
+<p>** 从远程仓库克隆<br>当我们从零开发时先创建一个远程仓库。<br>让后使用git clone 克隆一个本地仓库<br>$ git clone git@github.com:xxxxxx/xxxx.git<br>$ cd xxxx<br>使用https除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放http端口的公司内部就无法使用ssh协议而只能用https。</p>
+<p>** 分支 branch<br>分支在实际中有什么用呢？假设你准备开发一个新功能，但是需要两周才能完成，第一周你写了50%的代码，如果立刻提交，由于代码还没写完，不完整的代码库会导致别人不能干活了。如果等代码全部写完再一次提交，又存在丢失每天进度的巨大风险。</p>
+<p>$ git branch dev 创建分支<br>$ git checkout -b dev 创建分支并切换过去<br>$ git branch 查看当前分支<br>$ git merge dev 把dev分支合并到master分支上,必须切换到master上<br>$ git branch -d dev 删除dev分支，合并之后再删除分支dev</p>
+<p>** 冲突<br>当master 分支test.txt 文件与 dev 分支test文件不同时，要执行合并命令是就会出现冲突，这时我们是不能提交的，只能解决冲突之后才能提交，查看冲突的文件test.txt &lt;&lt;&lt;&lt;&lt;=======&gt;&gt;&gt;&gt;&gt;&gt;是git标记出不同分支的内容。<br>修改过冲突文件之后从新git add test.txt git commit -m “xxx”就可以了。<br>最后要删除dev分支</p>
+<p>用git log –graph命令可以看到分支合并图</p>
+<p>合并分支时，加上–no-ff参数就可以用普通模式合并，合并后的历史有分支，能看出来曾经做过合并，而fast forward合并就看不出来曾经做过合并。</p>
+<p>** Bug分支<br>git stash 把当前工作现场存储起来，等以后恢复现场后继续工作,这是git status查看工作区就是干净的<br>$ git stash list 查看有哪些stash<br>$ git stash apply 恢复存储的工作，并没有删除stash<br>$ git stash drop 删除stash<br>$ git stash pop 恢复的同时删除stash</p>
+<p>$git stash apply stash@{0} 删除指定stash</p>
+<p>** git branch -D feature-vulcan 在没有合并时强制删除该分支</p>
+<p>$ git remote 查看远程分支<br>$ git remote -v 想看远程仓库详情</p>
+<p>** 推送分支<br>推送分支，就是把该分支上的所有本地提交推送到远程库。推送时，要指定本地分支，这样，Git就会把该分支推送到远程库对应的远程分支上：<br>$git push origin master<br>这样就把本地master分支推送到远程仓库origin上了<br>$git push origin dev 这样就把本地dev分支推送到远程origin分支了</p>
+<p>但是，并不是一定要把本地分支往远程推送，那么，哪些分支需要推送，哪些不需要呢？</p>
+<p>master分支是主分支，因此要时刻与远程同步；</p>
+<p>dev分支是开发分支，团队所有成员都需要在上面工作，所以也需要与远程同步；</p>
+<p>bug分支只用于在本地修复bug，就没必要推到远程了，除非老板要看看你每周到底修复了几个bug；</p>
+<p>feature分支是否推到远程，取决于你是否和你的小伙伴合作在上面开发。</p>
+<p>总之，就是在Git中，分支完全可以在本地自己藏着玩，是否推送，视你的心情而定！</p>
+<p>** 抓取分支<br>当你的小伙伴从远程库clone时，默认情况下，你的小伙伴只能看到本地的master分支。</p>
+<p>现在，你的小伙伴要在dev分支上开发，就必须创建远程origin的dev分支到本地，于是他用这个命令创建本地dev分支：<br>$git checkout -b dev origin/dev<br>现在，他就可以在dev上继续修改，然后，时不时地把dev分支push到远程：<br>$ git push origin dev</p>
+<p>** tag<br>git tag v1.0 创建tag<br>git tag 查看tag<br>$git tag v0.9 commitId<br>git show <tagname>参考tag</tagname></p>
+<p>git tag -d v0.1 删除tag<br>git push origin v1.0 推送tag到远程<br>git push origin –tags 推送全部tag到远程<br>git push origin :refs/tags/<tagname>可以删除一个远程标签。</tagname></p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="https://z10blog.github.io/2017/04/10/git-基本操作/" data-id="cj1ca7x5h000434vg7wmvvmkc" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2017/03/20/Ubuntu-kivy安装/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Ubuntu kivy安装</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Hello-World/">Hello World</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Kivy/">Kivy</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/函数/">函数</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/对象/">对象</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/数据类型/">数据类型</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/语法/">语法</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Hello-World/" style="font-size: 10px;">Hello World</a> <a href="/tags/Kivy/" style="font-size: 10px;">Kivy</a> <a href="/tags/Python/" style="font-size: 20px;">Python</a> <a href="/tags/函数/" style="font-size: 10px;">函数</a> <a href="/tags/对象/" style="font-size: 10px;">对象</a> <a href="/tags/数据类型/" style="font-size: 10px;">数据类型</a> <a href="/tags/语法/" style="font-size: 10px;">语法</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/04/">April 2017</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2017/03/">March 2017</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2017/04/10/git-基本操作/">git 基本操作</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/20/Ubuntu-kivy安装/">Ubuntu kivy安装</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/19/Python-获取对象的信息/">Python 获取对象的信息</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/16/Python-函数认识/">Python 函数认识</a>
+          </li>
+        
+          <li>
+            <a href="/2017/03/15/Python-数据类型和变量/">Python 数据类型和变量</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2017 Feng Ying<br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/script.js"></script>
+
+  </div>
+</body>
+</html>
